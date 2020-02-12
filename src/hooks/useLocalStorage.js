@@ -6,7 +6,7 @@ export const useLocalStorage = (key, initialValue) => {
             return JSON.parse(window.localStorage.getItem(key))
         }
         else {
-            window.localStorage.setItem(key, JSON.stringify(initialState));
+            window.localStorage.setItem(key, JSON.stringify(initialValue));
             return initialValue;
         }
     }); //whatever returns from this callback function in useState, gets set as the initial value
